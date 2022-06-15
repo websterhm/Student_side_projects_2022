@@ -1,4 +1,3 @@
-import java.sql.Array;
 import java.util.*;
 
 
@@ -23,8 +22,8 @@ public class CootieCatcher {
 
     public void startingCountdownWord(String word) {
         char[] spellingOut = word.toCharArray();
-        for (int i = 0; i < spellingOut.length; i++) {
-            System.out.println(".........." + spellingOut[i]);
+        for (char c : spellingOut) {
+            System.out.println(".........." + c);
             System.out.println("**********************************");
         }
         System.out.println();
