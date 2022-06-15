@@ -1,26 +1,49 @@
 import java.sql.Array;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Scanner;
+import java.util.*;
 
 
 public class CootieCatcher {
 
-    public CootieCatcher(){}
-
-    public void countdownFrom8(int startingNumber){
-        for (int i = startingNumber-1; i > -1; i--){
-            startingCountdownIndex(i);
-        }
+    public CootieCatcher() {
     }
 
-    public void startingCountdownIndex(int index){
+    public void countdownFrom8(int startingNumber) {
+        for (int i = startingNumber - 1; i > -1; i--) {
+            startingCountdownIndex(i);
+        }
+        System.out.println();
+    }
+
+    //make it count from letters in word instead of numbers
+    public void startingCountdownIndex(int index) {
         String[] countingDown = {"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight"};
         System.out.println(".........." + countingDown[index]);
         System.out.println("**********************************");
     }
 
+    public void startingCountdownWord(String word) {
+        char[] spellingOut = word.toCharArray();
+        for (int i = 0; i < spellingOut.length; i++) {
+            System.out.println(".........." + spellingOut[i]);
+            System.out.println("**********************************");
+        }
+        System.out.println();
+    }
+
+    public void chooseSomethingPrint (String[] choice) {
+        System.out.println("*********************************************");
+        System.out.println("*******Please pick from the following********");
+        System.out.println("*********************************************");
+        System.out.println("***** " + choice[0] + " ** " + choice[1] + " ** " + choice[2] + " ** " + choice[3] + " ****");
+        System.out.println("*********************************************");
+        System.out.println("*********************************************");
+    }
+
+    public void printFortune(Map<String, String> fortunes, String choice){
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("**************** Your Fortune ***************");
+        System.out.println(fortunes.get(choice));
+    }
 
     public static void main(String[] args) {
 
@@ -28,6 +51,23 @@ public class CootieCatcher {
 
         Scanner userInput = new Scanner(System.in);
 
+        String[] shapeChoices = {"Star", "Square", "Diamond", "Heart"};
+        String[] colorChoices = {"Red", "Purple", "Blue", "Green"};
+
+
+        Map<String, String> fortuneMap = new HashMap<>();
+        fortuneMap.put("STAR", "Do not mistake temptation for opportunity");
+        fortuneMap.put("RED", "No snowflake in an avalanche ever feels responsible");
+        fortuneMap.put("SQUARE", "An alien of some sort will be appearing to your shortly");
+        fortuneMap.put("PURPLE", "Little by little, one travels far");
+        fortuneMap.put("DIAMOND", "The road to riches is paved with homework");
+        fortuneMap.put("BLUE", "Be careful who you trust- salt and sugar look the same");
+        fortuneMap.put("HEART", "If you look back, you'll soon be going that way");
+        fortuneMap.put("GREEN", "To truly find yourself, play hide and seek alone");
+
+
+        System.out.println("*********************************************");
+        System.out.println();
         System.out.println("*********************************************");
         System.out.println("**********Welcome to Cootie Catcher**********");
         System.out.println("*********************************************");
@@ -38,44 +78,31 @@ public class CootieCatcher {
 
         catcher.countdownFrom8(numberSelected);
 
-        System.out.println("*******Please pick from the following********");
-        System.out.println("*********************************************");
-        System.out.println("***** Star ** Square ** Diamond ** Heart ****");
-        String shapeSelected = (userInput.next()).toLowerCase();
-        System.out.println("*********************************************");
 
-        if (shapeSelected.equals("star")) {
-            catcher.countdownFrom8(4);
-        }else if (shapeSelected.equals("square")){
-            catcher.countdownFrom8(6);
-        }else if (shapeSelected.equals("diamond")){
-            catcher.countdownFrom8(7);
-        }else if (shapeSelected.equals("heart")) {
-            catcher.countdownFrom8(5);
+        if (numberSelected % 2 == 0) {
+
+            catcher.chooseSomethingPrint(colorChoices);
+            String userSelectedColor = (userInput.next()).toUpperCase();
+            catcher.startingCountdownWord(userSelectedColor);
+            catcher.chooseSomethingPrint(shapeChoices);
+            String userSelectedShape = (userInput.next()).toUpperCase();
+            catcher.printFortune(fortuneMap,userSelectedShape);
+
+        }else if (numberSelected % 2 != 0){
+
+            catcher.chooseSomethingPrint(shapeChoices);
+            String userSelectedShape = (userInput.next()).toUpperCase();
+            catcher.startingCountdownWord(userSelectedShape);
+            catcher.chooseSomethingPrint(colorChoices);
+            String userSelectedColor = (userInput.next()).toUpperCase();
+            catcher.printFortune(fortuneMap, userSelectedColor);
+
+        }else{
+
+            System.out.println("****************** So Sorry ***************");
+            System.out.println("************* That is not an option********");
+
         }
-
-            System.out.println("*******Please pick from the following********");
-            System.out.println("*********************************************");
-            System.out.println("***** Red ** Purple ** Blue ** Green ****");
-            String colorSelected = (userInput.next()).toLowerCase();
-            System.out.println("*********************************************");
-
-        if (colorSelected.equals("red")) {
-            catcher.countdownFrom8(4);
-            System.out.println("Do not mistake temptation for opportunity");
-        }else if (colorSelected.equals("purple")){
-            catcher.countdownFrom8(6);
-            System.out.println("An alien of some sort will be appearing to your shortly");
-        }else if (colorSelected.equals("blue")){
-            catcher.countdownFrom8(7);
-            System.out.println("The road to riches is paved with homework");
-        }else if (colorSelected.equals("green")) {
-            catcher.countdownFrom8(5);
-            System.out.println("If you look back, you'll soon be going that way");
-        }
-
-        System.out.println("*********************************************");
-
 
         }
 
