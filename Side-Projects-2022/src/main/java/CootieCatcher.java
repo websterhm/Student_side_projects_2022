@@ -15,7 +15,7 @@ public class CootieCatcher {
 
     //make it count from letters in word instead of numbers
     public void startingCountdownIndex(int index) {
-        String[] countingDown = {"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight"};
+        String[] countingDown = {"1", "2", "3", "4", "5", "6", "7", "8"};
         System.out.println(".........." + countingDown[index]);
         System.out.println("**********************************");
     }
@@ -30,12 +30,12 @@ public class CootieCatcher {
     }
 
     public void chooseSomethingPrint (String[] choice) {
-        System.out.println("*********************************************");
-        System.out.println("*******Please pick from the following********");
-        System.out.println("*********************************************");
-        System.out.println("***** " + choice[0] + " ** " + choice[1] + " ** " + choice[2] + " ** " + choice[3] + " ****");
-        System.out.println("*********************************************");
-        System.out.println("*********************************************");
+        System.out.println("***********************************************");
+        System.out.println("******* Please pick from the following ********");
+        System.out.println("***********************************************");
+        System.out.println("***** " + choice[0] + " ** " + choice[1] + " ** " + choice[2] + " ** " + choice[3] + " *****");
+        System.out.println("***********************************************");
+        System.out.println("***********************************************");
     }
 
     public void printFortune(Map<String, String> fortunes, String choice){
@@ -65,15 +65,15 @@ public class CootieCatcher {
         fortuneMap.put("GREEN", "To truly find yourself, play hide and seek alone");
 
 
-        System.out.println("*********************************************");
+        System.out.println("***********************************************");
         System.out.println();
-        System.out.println("*********************************************");
-        System.out.println("**********Welcome to Cootie Catcher**********");
-        System.out.println("*********************************************");
+        System.out.println("***********************************************");
+        System.out.println("********** Welcome to Cootie Catcher **********");
+        System.out.println("***********************************************");
         System.out.println();
-        System.out.println("**********Please enter a number 1-8**********");
+        System.out.println("********** Please enter a number 1-8 **********");
         int numberSelected = userInput.nextInt();
-        System.out.println("*********************************************");
+        System.out.println("***********************************************");
 
         catcher.countdownFrom8(numberSelected);
 

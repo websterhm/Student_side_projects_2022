@@ -1,0 +1,190 @@
+body{
+    background-color: lightgray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(85, 85, 85);
+}
+
+.whole-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    /* grid-template-rows: 7% 8% 10% 10% 35% 10%; */
+    grid-template-areas:
+        "header header header header header"
+        "photo1 photo1 photo2 photo2 photo2"
+        "photo1 photo1 photo2 photo2 photo2"
+        " reasons reasons reasons reasons reasons"
+        "love lovephoto . trivia triviaphoto"
+        "footer footer footer footer footer";
+    gap: 10px;
+
+}
+
+a:link, a:visited {
+    background-color: black;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display:flex;
+    align-items: center;
+    border-radius: 75px;
+    margin: 10px;
+}
+
+a:hover, a:active {
+    background-color: #e68a22;
+}
+
+.photo{
+    border-radius: 50px;
+    margin: 15px;
+}
+
+#img1{
+    width: auto;
+    height: auto;
+    max-width: 250px;
+    max-height: 250px;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+#img2{
+    grid-area: photo2;
+    margin: 15px;
+}
+
+#img3{
+    grid-area: photo3;
+    max-width: 317px;
+    height: auto;
+    margin: 15px;
+}
+
+#img4{
+    grid-area:photo4;
+    margin: 15px;
+}
+
+#name{
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+    align-items: center;
+    font-size: 6rem;
+    flex-grow: 1
+}
+
+#flex-header{
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: header;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.photos-block-1{    
+    display: flex;        
+    flex-wrap: wrap;
+    grid-area: photo1;
+}
+
+.photos-block-2{
+    display: flex;
+    flex-wrap: nowrap;
+    grid-area: photo2;
+    max-height: auto;
+}
+
+.reasons{
+    display: flex;
+    grid-area: reasons;
+    flex-wrap: wrap;
+    font-size:2rem;
+    margin: 25px;
+}
+
+.love-block{
+    grid-area: love;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    max-width: 75%;    
+}
+
+#love-flex{
+    display:flex;
+    flex-direction: column;
+    list-style: "⧫";
+    justify-content: flex-start;
+    font-size: 2rem;
+}
+
+#lovephoto{
+    display:flex;
+    grid-area: lovephoto;
+    flex-direction: column;
+    max-width:75%;
+}
+
+.trivia-block{
+    grid-area: trivia;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    max-width: 75%;
+      
+}
+
+#trivia-flex{
+    display: flex;
+    flex-direction:column;
+    list-style: "⧫";
+    justify-content: stretch;
+    font-size: 2rem;
+    flex-grow: 1;
+}
+
+
+#triviaphoto{
+    display:flex;
+    flex-direction: column;
+    grid-area: triviaphoto;
+    max-width: 75%;
+}
+
+.title{
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.footer-block{
+    display:flex;
+    grid-area: footer;
+    flex-wrap: nowrap;
+    justify-content: center;
+    max-height: 70%;
+}
+
+.buttons{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+}
+
+
+#heart,
+#question,
+#music{
+    display: flex;
+    width:auto;
+    height: auto;
+    flex-grow:1;
+    align-items: center;
+    }
