@@ -20,24 +20,41 @@ let fortunes = ["It is certain",
 
 const request = 'Type your question and hit Enter';
 const waiting= 'Focus on your question as I consult the beyond!'
-const tellClick='When you are ready for the answer, click the Magic 8 Ball';
+
+
+
+
+let isDisplayed = false;
 
 document.addEventListener('DOMContentLoaded',  ()=>{ 
 const eight = document.getElementById('eight');
-const answer = document.getElementById('answer');
 const eightball = document.getElementById('eight-ball');
 const question = document.getElementById('question');
 const enter = document.getElementById('enter');
+const img=document.getElementById('ball-image');
 
 //eightball.addEventListener('click',
 
 enter.addEventListener('click',  ()=>{
-     
-          let num = Math.floor(Math.random() * Math.floor(fortunes.length));
-          answer.innerText= fortunes[num];
-          
-     });
 
+     if (!isDisplayed){
+          setTimeout(testingAnswer, 1500);
+          img.setAttribute('class', 'shake');
+          isDisplayed = true;
+          enter.innerText = 'Tempt the fates again!'
+     }else{
+          answer.innerText = '';
+          isDisplayed = false;
+          enter.innerText = 'Tell me my fortune!';
+          img.removeAttribute('class','shake');
+     }
+     });
+         
 });
 
+function testingAnswer(){
+     let num = Math.floor(Math.random() * Math.floor(fortunes.length));
+     let answer = document.getElementById('answer');
+     answer.innerText= fortunes[num];
+}
 

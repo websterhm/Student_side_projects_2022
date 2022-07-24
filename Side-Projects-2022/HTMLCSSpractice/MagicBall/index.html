@@ -11,7 +11,7 @@
 
 <body>
      <div id="content">
-          <h1>Magic 8 ball</h1>
+          <h1 class='wave'>Magic 8 ball</h1>
           <section id='question-answer'>
                <p id="info">Please type your question and click below</p>
                <section id='input-buttons'>
@@ -21,14 +21,15 @@
           </section>     
           <div id="eight-ball" class="eight-ball">
                <div class="answers">
-                    <p id="eight"><img src="8ball.png" alt="8-Ball" draggable=true></p>
-                    <p id="answer"></p>
+                    <p id="eight"><img src="8ball.png" alt="8-Ball" id="ball-image"></p>
+                    <p id="answer" class="wave"></p>
+                    <!-- <p id="ready-button"><button type="button" class="button-ready"></button></p> -->
                </div>
           </div>
           </di>
           <script src="app.js"></script>
 </body>
 <footer>Images from seekpng.com; Used tutorial from Medium by Sylvian Saurel as starting point for layout; Shake CSS
-     from W3 schools;</footer>
-
+     from W3 schools; font styling framework from CodePen;
+</footer>
 </html>
