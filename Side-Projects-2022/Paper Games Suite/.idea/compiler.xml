@@ -6,7 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Paper Games" />
+        <module name="Side-Projects-2022" />
+        <module name="Paper Games Suite" />
       </profile>
     </annotationProcessing>
   </component>

@@ -1,13 +1,74 @@
 body{
     background-image: url("https://cdn.britannica.com/91/190691-004-18E738BC/Snellen-chart-acuity.jpg");
     background-repeat: repeat;
+    background-size: 200px 275px;
     font-family: 'Comic Sans MS';
+    cursor: url(https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/sony/336/ewe_1f411.png), auto;
+  
 }
+
+.custom{
+     cursor: url(https://image.shutterstock.com/image-vector/sheep-sunglasses-farm-animal-emoji-260nw-1307184853.jpg);
+}
+
+::-webkit-scrollbar{
+     width: 75px;
+
+}
+
+::-webkit-scrollbar-thumb{
+     background: url("https://image.shutterstock.com/image-illustration/funky-colorful-circles-geometric-seamless-260nw-1762037927.jpg");
+     border-radius: 20px;
+     
+}
+
+::-webkit-scrollbar-track{
+   background: brown  url("https://www.google.com/imgres?imgurl=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F3363910.jpg&imgrefurl=https%3A%2F%2Fwallpaperaccess.com%2Feyeglasses&tbnid=Gyp2cur7GWifyM&vet=10CA8QxiAoAWoXChMIgOSwqtWM-QIVAAAAAB0AAAAAEAY..i&docid=vDMGV833PetLeM&w=1280&h=1024&itg=1&q=glasses%20wallpaper&ved=0CA8QxiAoAWoXChMIgOSwqtWM-QIVAAAAAB0AAAAAEAY");
+}
+::-webkit-scrollbar-thumb:hover{
+     background: url("https://thumbs.dreamstime.com/b/seamless-pattern-lace-fabric-green-red-color-illustration-seamless-pattern-lace-fabric-green-red-color-146754171.jpg");
+}
+
+::-webkit-scrollbar-track:hover{
+     background: rgb(216, 46, 216) url("https://www.google.com/imgres?imgurl=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F3363910.jpg&imgrefurl=https%3A%2F%2Fwallpaperaccess.com%2Feyeglasses&tbnid=Gyp2cur7GWifyM&vet=10CA8QxiAoAWoXChMIgOSwqtWM-QIVAAAAAB0AAAAAEAY..i&docid=vDMGV833PetLeM&w=1280&h=1024&itg=1&q=glasses%20wallpaper&ved=0CA8QxiAoAWoXChMIgOSwqtWM-QIVAAAAAB0AAAAAEAY");
+  }
 
 h1{
     color: red;
     text-align: right;
-    font-size: 8rem;
+    font-size: 7rem;
+
+}
+
+h1:hover{
+     -webkit-filter: invert(1);
+}
+
+.flex-top{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.flex-top:hover{
+     -webkit-filter: invert(1);
+}
+
+h3{
+     color: greenyellow;
+     text-align: center;
+}
+h3:hover{
+     -webkit-filter: invert(1);
+}
+
+menu{
+     font-size: 50px;
+     color: brown;
+}
+
+menu:hover{
+     -webkit-filter: invert(1);
+     
 }
 
 h2{
@@ -15,10 +76,22 @@ h2{
     text-align: right;
 }
 
+h2:hover{
+     -webkit-filter: invert(1);
+}
+
+#sticker{
+     max-width: 50px;
+}
+
 div{
     display: flex;
     flex-direction: column;
     max-width: 25%;
+    justify-content: center;
+}
+div:hover{
+     -webkit-filter: invert(1);
 }
 
 /* menu{
@@ -34,8 +107,8 @@ div{
 
 h1 {
   color: hsla(0, 0%, 0%, .9);
-  font: normal 140px Varela Round, sans-serif;
-  height: 140px;
+  font: normal Varela Round, sans-serif;
+  height: 20%;
   left: 0;
   letter-spacing: 5px;
   text-align: center;
