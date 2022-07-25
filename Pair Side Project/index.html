@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+     <div id="header">
+          <h1>Yarn Stash</h1>
+     </div>
+
+     <main>
+          <div id="calculator">
+               <section id="project-name"></section>
+               <label for="projectName">ProjectName:</label>
+               <input type="text">
+               <section id="project-type"></section>
+               <label for="projectType">Project Type:</label>
+               <select name="projectType" id="project-type">
+                    <option value="blank">--</option>
+                    <option value="amigurumi">Amigurumi</option>
+                    <option value="blanket">Blanket</option>
+                    <option value="hat">Hat</option>
+                    <option value="scarf">Scarf</option>
+                    <option value="shawl">Shawl</option>
+                    <option value="sweater">Sweater</option>
+                    <option value="other">Other</option>
+               </select>
+               </section>
+               
+               <section id="craft-choice">
+                    <label for="hooks-needles">Hooks or Needles?</label>
+                    <select name="hooks-needles" id="choice-button">
+                         <option value=" ">--</option>
+                         <option value="Crochet">Crochet</option>
+                         <option value="Knitting">Knitting</option>
+                         <!-- <option value="Both"></option> -->
+                    </select>
+               </section>
+               <section id="yarn-name">
+                    <label for="yarnName">Yarn Name:</label>
+                    <input type="text">
+               </section>
+               <section id="yarn-weight">
+                    <label for="projectType">Project Type:</label>
+                    <select name="projectType" id="project-type">
+                         <option value=" ">--</option>
+                         <option value="Lace">Lace</option>
+                         <option value="Fingering">Fingering</option>
+                         <option value="Sport">Sport</option>
+                         <option value="DK">DK</option>
+                         <option value="Worsted">Worsted</option>
+                         <option value="Bulky">Bulky</option>
+                         <option value="Super-Bulky">Super-Bulky</option>
+                         <option value="Jumbo">Jumbo</option>
+                    </select>
+               </section>
+               <section id="result-needed"></section>
+               <!-- calculation for total yardage/meterage/wahtever -->
+               <section id="chosen-unit"></section>
+                    <label for="chosen-measure">Output</label>
+                         <select name="output-unit" id="output-unit">
+                              <option value=" ">--</option>
+                              <option value="grams">Grams</option>
+                              <option value="meters">Meters</option>
+                              <option value="yards">Yards</option>
+                         </select>    
+               <section id="output-needed"></section>
+                    <!-- result of number of skeins needed -->
+          </div>
+          <div id="comments">
+               <p><label for="comments">Project Comments:</label></p>
+               <textarea name="comments" id="comment-area" cols="30" rows="10"></textarea>
+          </div>
+          <div id="needed-items">
+               <label for="neededItems">Additional Items Required:</label>
+                    <input type="text">
+          </div>
+          <div id="comparison-chart">
+               <img src="yarn needed.PNG" alt="Chart-for-yarn-conversions">
+          </div>
+     </main>
+     <script src="yarn.js"></script>
+</body>
+
+</html>

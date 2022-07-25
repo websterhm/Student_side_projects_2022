@@ -1,0 +1,19 @@
+body{
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     background-color: rgb(173, 109, 192);
+}
+
+img{
+     max-height: 50%;
+     max-width: auto;
+}
+
+div{
+     margin: 10px;
+     display: flex;
+     flex-direction: column;
+}
+
+#project-name{
+     flex-wrap: nowrap;
+}
