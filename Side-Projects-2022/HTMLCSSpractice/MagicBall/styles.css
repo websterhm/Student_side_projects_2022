@@ -22,8 +22,9 @@ h1{
      display: flex;
      flex-direction: column;
      justify-content: center;
-     color: violet;
+     color: whitesmoke;
      font-size: 150%;
+     text-shadow: 1px 1px black;
 }
 
 #info{
@@ -42,7 +43,6 @@ h1{
      margin-right:300px;
      display:flex;
      justify-content: center;
-     margin: 25px;
      flex-wrap: nowrap;
      flex-direction: column;
      align-items: center;
@@ -66,7 +66,7 @@ button:hover{
 }
 
 #answer{
-     color: white;
+     color: whitesmoke;
      text-align: center;
      font-size: 40px;
      animation: fadeIn 5s;
@@ -80,10 +80,25 @@ footer{
      color: black;
 }
 
+#gaze{
+     width: 75%;
+     display: flex;
+     margin-bottom: -250px;
+     margin-top: -75px;
+     /* flex-grow: 1; */
+}
+
 #eight-ball{
      display: flex;
      justify-content: center;
-     margin: 25px;
+     flex-direction: column;
+    
+}
+
+#ball-image{
+     margin-top: -75px;
+     margin-bottom: -100px;
+     width: 40%;
 }
 
 img.shake{
@@ -111,7 +126,7 @@ img.shake{
    }
 
    .wave {
-     animation: 4s anim-popoutin;
+     animation: 5s anim-popoutin;
    }
    
    @keyframes anim-popoutin {
